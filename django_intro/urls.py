@@ -21,4 +21,12 @@ from app_intro import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
+    path('hello/', views.hello),
+    path('dinner/', views.dinner),
+    path('lotto/', views.lotto),
+    # variable 라우팅(변수를 <>로 설정)
+    path('greeting/<name>/', views.greeting),
+    # int 등 아무것도 안 적으면 자동으로 str처리
+    path('cube/<int:num>/', views.cube),
+    path('posts/', views.posts),
 ]
